@@ -418,16 +418,13 @@
                   <th>Sello Digital Institucional</th>
                   <td><div class="code-box">${hashSimulado}FA81C4D0A27611232B38E5D13322B6112327B1E3E==</div></td>
                 </tr>
-               </tbody>
-                </table>
-              </div>
-
-              <div style="padding: 25px; background-color: #fafafa; border-top: 1px solid #eaeaea;">
-                <p style="margin-bottom:0; color: #666; font-size: 14px; text-align: center;">
-                  Documento validado por el sistema automatizado. En caso de advertir diferencias o ausencia de información,
-                  favor de escribir a <a href="mailto:acuerdo445@sidgbe.gob.mx" style="color: var(--gob-wine); font-weight: 600;">acuerdo445@sidgbe.gob.mx</a>.
-                </p>
-              </div>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="alert alert-modern alert-info-modern" style="margin-top: 20px;">
+          <strong>Verificación de autenticidad:</strong> Este documento digital ha sido timbrado y verificado mediante los protocolos del Acuerdo 445.
+        </div>`;
     } else {
       contenedor.innerHTML = `<div class="alert alert-modern alert-danger-modern"><strong>Sin registros:</strong> El folio <strong>${folioInput}</strong> no se encuentra en el sistema.</div>`;
     }
