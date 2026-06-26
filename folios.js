@@ -9,8 +9,10 @@ const baseDatos = {
         plan: "BACHILLERATO INTENSIVO GENERAL", 
         promedio: "8.5", 
         periodo: "21-07-2021 al 15-08-2022", 
-        estatus: "REGISTRADO", 
+        estatus: "REGISTRADO",
+        creditos:"360"
         timbrado: "2022-08-25 16:20:11" 
+        
     },
     "CBG376039125100": { 
         nombre: "ISRAEL INDA DELGADO", 
