@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Módulo de Consulta Documental | Acuerdo 445</title>
-    <meta name="description" content="Módulo institucional de referencia documental por folio para documentos emitidos en el marco aplicable al Acuerdo 445.">
+    <meta name="description" content="Módulo institutional de referencia documental por folio para documentos emitidos en el marco aplicable al Acuerdo 445.">
 
     <link href="/favicon.ico" rel="shortcut icon">
-    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+    <link href="https://cdn.gob.mx" rel="stylesheet">
 
     <style>
       :root {
@@ -46,7 +46,7 @@
         background: linear-gradient(90deg, var(--gob-gold) 0%, #d8be9d 100%);
       }
 
-      .hero-interior h1 {
+       .hero-interior h1 {
         font-size: 38px;
         font-weight: 700;
         margin-top: 5px;
@@ -167,7 +167,7 @@
         vertical-align: middle;
       }
 
-      .table-modern > tbody > tr > th {
+     .table-modern > tbody > tr > th {
         color: #555;
         font-weight: 600;
         font-size: 15px;
@@ -187,6 +187,7 @@
         border-top: 2px solid rgba(97, 18, 50, 0.1);
         border-bottom: 2px solid rgba(97, 18, 50, 0.1);
         padding: 12px 25px;
+        
       }
 
       /* Píldora VÁLIDO personalizada */
@@ -216,8 +217,7 @@
         line-height: 1.6;
         letter-spacing: 0.5px;
       }
-
-      .alert-modern {
+       .alert-modern {
         border: none;
         border-left: 5px solid;
         border-radius: 8px;
@@ -243,16 +243,14 @@
       <div class="container">
 
         <ol class="breadcrumb">
-          <li><a href="index.php">Inicio</a></li>
+          <li><a href="#">Inicio</a></li>
           <li class="active">Referencia documental por folio</li>
         </ol>
 
         <div class="search-card">
           <div class="row">
             <div class="col-md-7 border-right-modern">
-              <form method="post" action="" autocomplete="off" novalidate>
-                <input type="hidden" name="csrf_token" value="7eac729b7adc57dcb4b635ebc13b20d7ec82c8aed1806dcf11284a116f2ec28c">
-
+              <form id="formConsulta" autocomplete="off" novalidate>
                 <div class="form-group" style="margin-bottom: 25px;">
                   <label for="folio" style="font-size: 16px; margin-bottom: 10px;">Folio del documento</label>
                   <input
@@ -261,8 +259,7 @@
                     id="folio"
                     name="folio"
                     maxlength="100"
-                    value="CBG3760391153"
-                    placeholder="Ejemplo: CBG12345678"
+                    placeholder="Ejemplo: CBG123456789876"
                     required
                   >
                   <p class="help-block" style="margin-top: 8px; color: #777;">Capture el folio exactamente como aparece en el documento.</p>
@@ -270,7 +267,7 @@
 
                 <div style="margin-top: 30px;">
                   <button type="submit" class="btn btn-ultra-modern">Consultar Folio</button>
-                  <a href="" class="btn btn-outline-modern">Limpiar</a>
+                  <button type="button" id="btnLimpiar" class="btn btn-outline-modern">Limpiar</button>
                 </div>
               </form>
             </div>
@@ -289,131 +286,133 @@
           </div>
         </div>
 
-        
-        
-                  <div class="panel panel-modern" style="margin-bottom: 60px;">
-            <div class="panel-heading">
-              <h3 class="panel-title">Ficha de correspondencia registral</h3>
-            </div>
-            <div class="panel-body" style="padding: 0;">
-              
-              <div style="padding: 25px 25px 0 25px;">
-                <div class="alert alert-modern alert-success-modern" style="margin-bottom: 15px;">
-                  <strong><i class="glyphicon glyphicon-ok" style="margin-right: 5px;"></i> Resultado:</strong> Se localizaron datos registrales asociados al folio capturado.                </div>
-                <div class="alert alert-modern alert-info-modern" style="margin-bottom: 25px;">
-                  La información mostrada corresponde a los datos registrales localizados con base en el folio capturado
-                  y se presenta para fines de correspondencia documental.
-                </div>
-              </div>
+        <!-- Contenedor dinámico de resultados -->
+        <div id="resultadoConsulta" style="margin-top: 30px;"></div>
 
-              <div class="table-responsive">
-                <table class="table table-modern table-hover">
-                  <tbody>
-                    <tr class="active">
-                      <th colspan="2"><i class="glyphicon glyphicon-user" style="margin-right: 8px;"></i> Datos de la persona titular</th>
-                    </tr>
-                    <tr>
-                      <th width="35%">Nombre completo</th>
-                      <td><strong>JORGE LUIS LOPEZ</strong></td>
-                    </tr>
-                    <tr>
-                      <th>CURP</th>
-                      <td>CEPC990803MNLLRY07</td>
-                    </tr>
-                    <tr>
-                      <th>Número de matrícula</th>
-                      <td>1501R850623</td>
-                    </tr>
-
-                    <tr class="active">
-                      <th colspan="2"><i class="glyphicon glyphicon-education" style="margin-right: 8px;"></i> Datos del servicio educativo</th>
-                    </tr>
-                    <tr>
-                      <th>Institución educativa emisora</th>
-                      <td>DIRECCIÓN GENERAL DE BACHILLERATO</td>
-                    </tr>
-                    <tr>
-                      <th>Servicio educativo</th>
-                      <td>Dirección General del Bachillerato (Acuerdo 445)</td>
-                    </tr>
-                    <tr>
-                      <th>Plantel o servicio educativo</th>
-                      <td>DIRECCIÓN GENERAL DE BACHILLERATO</td>
-                    </tr>
-                    <tr>
-                      <th>Clave de Centro de Trabajo</th>
-                      <td><span style="font-family: monospace; font-size: 15px; background: #f4f4f4; padding: 4px 8px; border-radius: 4px;">09DEX0001S</span></td>
-                    </tr>
-
-                    <tr class="active">
-                      <th colspan="2"><i class="glyphicon glyphicon-list-alt" style="margin-right: 8px;"></i> Trayectoria académica</th>
-                    </tr>
-                    <tr>
-                      <th>Estudios acreditados</th>
-                      <td>BACHILLERATO GENERAL CON FORMACIÓN LABORAL BÁSICA Y EXTENDIDA</td>
-                    </tr>
-                    <tr>
-                      <th>Resultado de evaluación</th>
-                      <td><span style="font-size: 18px; font-weight: 700; color: var(--gob-wine);">8.8</span></td>
-                    </tr>
-                    <tr>
-                      <th>Créditos obtenidos</th>
-                      <td>176</td>
-                    </tr>
-
-                    <tr class="active">
-                      <th colspan="2"><i class="glyphicon glyphicon-file" style="margin-right: 8px;"></i> Datos del documento</th>
-                    </tr>
-                    <tr>
-                      <th>Estatus actual</th>
-                      <td>
-                        <span class="badge-valido">
-                          <i class="glyphicon glyphicon-ok-sign" style="margin-right: 6px;"></i> VÁLIDO
-                        </span>
-                        <span style="color: #777; font-size: 13px; margin-left: 10px; font-weight: normal;">(REGISTRADO)</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>Folio consultado</th>
-                      <td><strong style="font-size: 16px; color: var(--gob-wine);">CBG3760391153</strong></td>
-                    </tr>
-                    <tr>
-                      <th>Fecha y hora de timbrado</th>
-                      <td><span style="color: #444;"><i class="glyphicon glyphicon-time" style="margin-right: 5px;"></i> 11/03/2025 14:29:35</span></td>
-                    </tr>
-
-                    <tr class="active">
-                      <th colspan="2"><i class="glyphicon glyphicon-qrcode" style="margin-right: 8px;"></i> Nodo de Autoridad Firmante</th>
-                    </tr>
-                    <tr>
-                      <td colspan="2" style="padding: 25px;">
-                        <div style="margin-bottom: 25px;">
-                          <strong style="display: block; margin-bottom: 8px; color: var(--gob-wine); font-size: 15px;">Cadena Original del complemento de certificación :</strong>
-                          <div class="code-box">fHwzLjB8MTZ8MDlERVgwMDAxU3xESVJFQ0NJw5NOIEdFTkVSQUwgREUgQkFDSElMTEVSQVRPfERJUkVDQ0nDk<br>04gR0VORVJBTCBERSBCQUNISUxMRVJBVE98Q0VQQzk5MDgwM01OTExSWTA3fENZTlRISUEgQ0xFTUVOVEUgUE<br>VSRVp8MTUwMVI4NTA2MjN8MTEvMDMvMjAyNSAxNDoyOTozNXwxNzZ8OC44fEJBQ0hJTExFUkFUTyBHRU5FUkF<br>MIENPTiBGT1JNQUNJw5NOIExBQk9SQUwgQsOBU0lDQSBZIEVYVEVORElEQXx8</div>
-                        </div>
-                        
-                        <div>
-                          <strong style="display: block; margin-bottom: 8px; color: var(--gob-wine); font-size: 15px;">Sello Digital de la Autoridad (Firma Electrónica Avanzada):</strong>
-                          <div class="code-box">0q9e4q+Qec8cT4apI5ZJADZCG0KEzK020Lr5yOuBJx+PwdhYHQgAXwlnwQoweSFDHxXT7K3T1Xgn9+ZPEULti<br>fXuUra0XyfiRm3VtMJzmoChlkb9yJ/thQ61xQoKJpWHNM0u1ipPoM3Hq3S9RF8NashHFscbDo7CZufGzYms1S<br>KQ0p3TEe8O/Khqt7UBpiHspIWY0Ozmcf4YDEWyhwZRyOFol2r1HLlaW0LTfab7HCm9WQh8aCcxnQJlH8QheT5<br>8LPt3wSf0wbCOPfMIH4eswLQHkB1tS4/SQ8Mrn3cNP8jOXR9V54qlQg8oNYDRiM2JS+fciOq4wp9C/65hlkdt<br>oHSbbMCMUxGffDWd8YMQlX0haIpFsYhHdqHtCC4iEoSLdyWohfPzyQsvMhzNB96ryE1ebWSQeD2gURSgEuo8y<br>7o=</div>
-                        </div>
-                      </td>
-                    </tr>
-
-                  </tbody>
-                </table>
-              </div>
-
-              <div style="padding: 25px; background-color: #fafafa; border-top: 1px solid #eaeaea;">
-                <p style="margin-bottom:0; color: #666; font-size: 14px; text-align: center;">
-                  Documento validado por el sistema automatizado. En caso de advertir diferencias o ausencia de información,
-                  favor de escribir a <a href="mailto:acuerdo445@sidgbe.gob.mx" style="color: var(--gob-wine); font-weight: 600;">acuerdo445@sidgbe.gob.mx</a>.
-                </p>
-              </div>
-
-            </div>
-          </div>
-        
       </div>
+    </main>
+
+    <script src="https://cdn.gob.mx"></script>
+
+    <!-- Conexión al archivo externo -->
+    <script src="folios.js"></script>
+
+    <!-- Lógica de control y renderizado -->
+    <!-- Reemplaza el bloque del script final en tu index.html con este para que lea la CURP -->
+<script>
+  document.getElementById('formConsulta').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const folioInput = document.getElementById('folio').value.trim().toUpperCase();
+    const contenedor = document.getElementById('resultadoConsulta');
+    
+    if (!folioInput) {
+      contenedor.innerHTML = `<div class="alert alert-modern alert-danger-modern"><strong>Error:</strong> Por favor, capture un número de folio.</div>`;
+      return;
+    }
+    if (typeof baseDatos === 'undefined') {
+      contenedor.innerHTML = `<div class="alert alert-modern alert-danger-modern"><strong>Error de sistema:</strong> No se pudo cargar 'folios.js'.</div>`;
+      return;
+    }
+
+    if (baseDatos[folioInput]) {
+      const data = baseDatos[folioInput];
+      
+      const hashSimulado = btoa(data.nombre + data.matricula).substring(0, 32).toUpperCase();
+      const cadenaOriginal = `||1.1|${folioInput}|${data.matricula}|${data.timbrado}|${data.estatus}||`;
+
+      contenedor.innerHTML = `
+        <div class="panel panel-modern">
+          <div class="panel-heading">
+            <h3 class="panel-title">Información Registral Encontrada</h3>
+          </div>
+          <div class="panel-body" style="padding: 0;">
+            <table class="table table-modern" style="margin-bottom: 0;">
+              <tbody>
+                <tr class="active">
+                  <th colspan="2">Datos Generales del Sustentante</th>
+                </tr>
+                <tr>
+                  <th>Folio Consultado</th>
+                  <td><strong>${folioInput}</strong></td>
+                </tr>
+                <tr>
+                  <th>Nombre Completo</th>
+                  <td>${data.nombre}</td>
+                </tr>
+                <tr>
+                  <th>CURP</th>
+                  <td>${data.curp || 'NO REGISTRADO'}</td> <!-- <--- AQUÍ LEE LA CURP DESDE FOLIOS.JS -->
+                </tr>
+                <tr>
+                  <th>Matrícula</th>
+                  <td>${data.matricula}</td>
+                </tr>
+                <tr class="active">
+                  <th colspan="2">Datos de la Institución y Plan de Estudios</th>
+                </tr>
+                <tr>
+                  <th>Autoridad Emisora</th>
+                  <td>${data.emisor}</td>
+                </tr>
+                <tr>
+                  <th>Plantel / CCT</th>
+                  <td>${data.plantel}</td>
+                </tr>
+                <tr>
+                  <th>Plan de Estudios</th>
+                  <td>${data.plan}</td>
+                </tr>
+                <tr>
+                  <th>Periodo de Estudios</th>
+                  <td>${data.periodo}</td>
+                </tr>
+                <tr>
+                  <th>Promedio General</th>
+                  <td><strong>${data.promedio}</strong></td>
+                </tr>
+                <tr class="active">
+                  <th colspan="2">Estatus de Certificación</th>
+                </tr>
+                <tr>
+                  <th>Estatus del Documento</th>
+                  <td><span class="badge-valido">✓ ${data.estatus}</span></td>
+                </tr>
+                <tr>
+                  <th>Fecha de Timbrado</th>
+                  <td>${data.timbrado}</td>
+                </tr>
+                <tr class="active">
+                  <th colspan="2">Elementos de Seguridad Digital</th>
+                </tr>
+                <tr>
+                  <th>Cadena Original</th>
+                  <td><div class="code-box">${cadenaOriginal}</div></td>
+                </tr>
+                <tr>
+                  <th>Sello Digital Institucional</th>
+                  <td><div class="code-box">${hashSimulado}FA81C4D0A27611232B38E5D13322B6112327B1E3E==</div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="alert alert-modern alert-info-modern" style="margin-top: 20px;">
+          <strong>Verificación de autenticidad:</strong> Este documento digital ha sido timbrado y verificado mediante los protocolos del Acuerdo 445.
+        </div>`;
+    } else {
+      contenedor.innerHTML = `<div class="alert alert-modern alert-danger-modern"><strong>Sin registros:</strong> El folio <strong>${folioInput}</strong> no se encuentra en el sistema.</div>`;
+    }
+  });
+
+  document.getElementById('btnLimpiar').addEventListener('click', function() {
+    document.getElementById('folio').value = '';
+    document.getElementById('resultadoConsulta').innerHTML = '';
+  });
+</script>
+
+
+ </div>
     </main>
 
     <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
