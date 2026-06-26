@@ -310,6 +310,7 @@
       contenedor.innerHTML = `<div class="alert alert-modern alert-danger-modern"><strong>Error:</strong> Por favor, capture un número de folio.</div>`;
       return;
     }
+
     if (typeof baseDatos === 'undefined') {
       contenedor.innerHTML = `<div class="alert alert-modern alert-danger-modern"><strong>Error de sistema:</strong> No se pudo cargar 'folios.js'.</div>`;
       return;
@@ -322,22 +323,33 @@
       const cadenaOriginal = `||1.1|${folioInput}|${data.matricula}|${data.timbrado}|${data.estatus}||`;
 
       contenedor.innerHTML = `
-        <div class="panel panel-modern">
-          <div class="panel-heading">
-            <h3 class="panel-title">Información Registral Encontrada</h3>
-          </div>
+       <div class="panel panel-modern" style="margin-bottom: 60px;">
+            <div class="panel-heading">
+              <h3 class="panel-title">Ficha de correspondencia registral</h3>
+            </div>
           <div class="panel-body" style="padding: 0;">
-            <table class="table table-modern" style="margin-bottom: 0;">
-              <tbody>
-                <tr class="active">
-                  <th colspan="2">Datos Generales del Sustentante</th>
-                </tr>
+
+<div style="padding: 25px 25px 0 25px;">
+                <div class="alert alert-modern alert-success-modern" style="margin-bottom: 15px;">
+                  <strong><i class="glyphicon glyphicon-ok" style="margin-right: 5px;"></i> Resultado:</strong> Se localizaron datos registrales asociados al folio capturado.                </div>
+                <div class="alert alert-modern alert-info-modern" style="margin-bottom: 25px;">
+                  La información mostrada corresponde a los datos registrales localizados con base en el folio capturado
+                  y se presenta para fines de correspondencia documental.
+                </div>
+              </div>
+            
+<div class="table-responsive">
+                <table class="table table-modern table-hover">
+                  <tbody>
+                    <tr class="active">
+                      <th colspan="2"><i class="glyphicon glyphicon-user" style="margin-right: 8px;"></i> Datos de la persona titular</th>
+                    </tr>
                 <tr>
                   <th>Folio Consultado</th>
                   <td><strong>${folioInput}</strong></td>
                 </tr>
                 <tr>
-                  <th>Nombre Completo</th>
+                  <th width="35%">Nombre completo</th>
                   <td>${data.nombre}</td>
                 </tr>
                 <tr>
@@ -345,14 +357,14 @@
                   <td>${data.curp || 'NO REGISTRADO'}</td> <!-- <--- AQUÍ LEE LA CURP DESDE FOLIOS.JS -->
                 </tr>
                 <tr>
-                  <th>Matrícula</th>
+                  <th>Número de matrícula</th>
                   <td>${data.matricula}</td>
                 </tr>
                 <tr class="active">
-                  <th colspan="2">Datos de la Institución y Plan de Estudios</th>
+                  <th colspan="2"><i class="glyphicon glyphicon-education" style="margin-right: 8px;"></i> Datos del servicio educativo</th>
                 </tr>
                 <tr>
-                  <th>Autoridad Emisora</th>
+                  <th>Institución educativa emisora</th>
                   <td>${data.emisor}</td>
                 </tr>
                 <tr>
@@ -360,6 +372,12 @@
                   <td>${data.plantel}</td>
                 </tr>
                 <tr>
+                  
+                <tr class="active">
+                      <th colspan="2"><i class="glyphicon glyphicon-list-alt" style="margin-right: 8px;"></i> Trayectoria académica</th>
+                    </tr>
+                    <tr>
+
                   <th>Plan de Estudios</th>
                   <td>${data.plan}</td>
                 </tr>
@@ -368,15 +386,22 @@
                   <td>${data.periodo}</td>
                 </tr>
                 <tr>
+                  
+                <th>Créditos obtenidos</th>
+                      <td>data.creditos</td>
+                    </tr>
+                  
                   <th>Promedio General</th>
                   <td><strong>${data.promedio}</strong></td>
                 </tr>
-                <tr class="active">
-                  <th colspan="2">Estatus de Certificación</th>
-                </tr>
-                <tr>
-                  <th>Estatus del Documento</th>
-                  <td><span class="badge-valido">✓ ${data.estatus}</span></td>
+                
+                  <tr class="active">
+                  <th colspan="2"><i class="glyphicon glyphicon-file" style="margin-right: 8px;"></i> Datos del documento</th>
+                    </tr>
+                    <tr>
+                  <th>Estatus actual</th>
+                  <td>
+                  <span class="badge-valido">✓ ${data.estatus}</span></td>
                 </tr>
                 <tr>
                   <th>Fecha de Timbrado</th>
@@ -411,6 +436,13 @@
   });
 </script>
 
+
+ </div>
+    </main>
+
+    <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+  </body>
+</html>
 
  </div>
     </main>
