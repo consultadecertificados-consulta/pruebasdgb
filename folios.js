@@ -1,7 +1,7 @@
 // folios.js - Base de datos actualizada
 const baseDatos = {
     "CBG376039125500": { 
-        nombre: "RICARDO MARTINEZ CASANOVA", 
+        nombre: "JORGE LUIS LOPEZ CRUZ", 
         matricula: "1701M960101", 
         curp: "MACR960101HDFRNS01", // <--- NUEVO CAMPO
         emisor: "DIRECCIÓN GENERAL DE BACHILLERATO ABIERTO DE LA CIUDAD DE MÉXICO", 
@@ -10,7 +10,7 @@ const baseDatos = {
         promedio: "8.5", 
         periodo: "21-07-2021 al 15-08-2022", 
         estatus: "REGISTRADO",
-        creditos:"360"
+        creditos obtenidos:"360"
         timbrado: "2022-08-25 16:20:11" 
         
     },
