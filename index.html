@@ -449,14 +449,7 @@
     document.getElementById('resultadoConsulta').innerHTML = '';
     });
 </script>
-window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const folioUrl = urlParams.get('folio');
-    if (folioUrl && baseDatos[folioUrl.toUpperCase()]) {
-        mostrarDatos(folioUrl.toUpperCase());
-    }
-};
-</script>
+
  </div>
     </main>
 
