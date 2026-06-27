@@ -14,16 +14,16 @@ const baseDatos = {
 
         },
     "CBG376039125111": { 
-        nombre: "ISRAEL INDA DELGADO", 
+        nombre: "ANA KARLA DOMINGUEZ DE JESUS", 
         matricula: "1702R950202", 
-        curp: "IIDI950202HDFRNS02", // <--- NUEVO CAMPO
-        emisor: "DIRECCION GENERAL DE BACHILLERATO DEL ESTADO DE AGUASCALIENTES", 
-        plantel: "AGUASCALIENTES CCT-01EEX0001Z", 
+        curp: "DOJA990501MDFMSN08", // <--- NUEVO CAMPO
+        emisor: "COORDINACIÓN ESTATAL DE PREPARATORIA ABIERTA DEL ESTADO DE PUEBLA", 
+        plantel: "MAZAPILTEPEC DE JUAREZ CCT-21EEX0001M", 
         plan: "BACHILLERATO INTENSIVO GENERAL", 
         promedio: "8.5", 
-        periodo: "21-07-2016 al 15-08-2018", 
+        periodo: "21-07-2015 al 15-08-2017", 
         estatus: "REGISTRADO", 
-        timbrado: "2018-08-25 16:20:11" 
+        timbrado: "2017-08-25 16:20:11" 
     }
      
         
