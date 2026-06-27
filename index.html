@@ -447,17 +447,15 @@
   document.getElementById('btnLimpiar').addEventListener('click', function() {
     document.getElementById('folio').value = '';
     document.getElementById('resultadoConsulta').innerHTML = '';
-    }
-
-        window.onload = function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const folioUrl = urlParams.get('folio');
-            if (folioUrl && baseDatos[folioUrl.toLowerCase()]) {
-                mostrarDatos(folioUrl);
-            
-        };
+    });
 </script>
-
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const folioUrl = urlParams.get('folio');
+    if (folioUrl && baseDatos[folioUrl.toUpperCase()]) {
+        mostrarDatos(folioUrl.toUpperCase());
+    }
+};
 
  </div>
     </main>
@@ -466,9 +464,3 @@
   </body>
 </html>
 
- </div>
-    </main>
-
-    <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
-  </body>
-</html>
