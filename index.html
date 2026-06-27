@@ -297,31 +297,7 @@
     <!-- Conexión al archivo externo -->
     <script src="folios.js"></script>
 
-    <!-- Lógica de control y renderizado -->
-    // DETECTAR FOLIO DESDE EL CÓDIGO QR AL CARGAR LA PÁGINA (Con espera asíncrona)
-      window.addEventListener('DOMContentLoaded', function() {
-        const parametrosURL = new URLSearchParams(window.location.search);
-        const folioDesdeQR = parametrosURL.get('folio'); // Busca la palabra "?folio=" en la URL
-        
-        if (folioDesdeQR) {
-          // Rellena el cuadro de texto automáticamente
-          document.getElementById('folio').value = folioDesdeQR;
-          
-          // Intentar ejecutar la consulta esperando a que folios.js cargue en memoria
-          let intentos = 0;
-          const comprobarYConsultar = setInterval(function() {
-            intentos++;
-            if (typeof baseDatos !== 'undefined') {
-              clearInterval(comprobarYConsultar);
-              // Ejecuta la búsqueda simulando el envío del formulario
-              document.getElementById('formConsulta').dispatchEvent(new Event('submit'));
-            } else if (intentos > 20) { // Si pasa más de 2 segundos sin cargar, se detiene
-              clearInterval(comprobarYConsultar);
-              console.error("Error: El archivo 'folios.js' tardó demasiado en cargar.");
-            }
-          }, 100); // Revisa cada 100 milisegundos
-        }
-      });
+    
       });!-- Reemplaza el bloque del script final en tu index.html con este para que lea la CURP -->
 <script>
   document.getElementById('formConsulta').addEventListener('submit', function(e) {
