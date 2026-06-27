@@ -43,14 +43,7 @@
   <strong>Resultado:</strong> <span id="resQR">Esperando escaneo...</span>
 </div>
 
-<script>
-const lector = new Html5Qrcode("lectorQR");
-lector.start(
-  { facingMode: "environment" },
-  { fps: 10, qrbox: { width: 250, height: 250 } },
-  dato => document.getElementById("resQR").textContent = dato
-).catch(() => document.getElementById("resQR").textContent = "No se pudo activar la cámara");
-</script>
+
 
       .hero-interior::after {
         content: '';
