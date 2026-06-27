@@ -324,12 +324,7 @@
     if (typeof baseDatos === 'undefined') {
       contenedor.innerHTML = `<div class="alert alert-modern alert-danger-modern"><strong>Error de sistema:</strong> No se pudo cargar 'folios.js'.</div>`;
       return;
-    }}
-
-    window.onload = function() {
-        const params = new URLSearchParams(window.location.search);
-        const f = params.get('folio') || params.get('folioSEP');
-        if (f) { document.getElementById("folioSEP").value = f; ejecutarBusqueda(); }
+    
     };
 
     if (baseDatos[folioInput]) {
