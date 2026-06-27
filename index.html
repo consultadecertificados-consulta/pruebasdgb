@@ -441,21 +441,17 @@
     document.getElementById('resultadoConsulta').innerHTML = '';
   });
 
-  // --------------------------
-  // ÚNICO BLOQUE AGREGADO: lee el folio desde el enlace
-  // --------------------------
-  window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const folioUrl = urlParams.get('folio');
-    if (folioUrl) {
-      const folio = folioUrl.trim().toUpperCase();
-      document.getElementById('folio').value = folio;
-      document.getElementById('formConsulta').dispatchEvent(new Event('submit'));
-    }
-  };
-  // --------------------------
-  // FIN DEL BLOQUE
-  // --------------------------
+  // Pega esto justo antes de cerrar </script> o al final de todo
+window.addEventListener('load', function() {
+  const params = new URLSearchParams(window.location.search);
+  const folio = params.get('folio');
+  if (folio) {
+    const campo = document.getElementById('folio');
+    campo.value = folio.trim().toUpperCase();
+    // Ejecuta la misma acción que el botón Consultar
+    document.getElementById('formConsulta').dispatchEvent(new Event('submit'));
+  }
+});
 
 </script>
 
