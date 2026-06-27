@@ -1,6 +1,6 @@
 // folios.js - Base de datos actualizada
 const baseDatos = {
-    "CBG376039125500": { 
+    "CBG37603912550-": { 
         nombre:"VANESSA BERNAL MARTINEZ", 
         matricula: "1701M960101", 
         curp: "BEMV920228MMCRRN03", // <--- NUEVO CAMPO
