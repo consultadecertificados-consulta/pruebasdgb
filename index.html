@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Módulo de Consulta Documental | Acuerdo 445</title>
-    <meta name="description" content="Módulo institutional de referencia documental por folio para documentos emitidos en el marco aplicable al Acuerdo 445.">
+    <meta name="description" content="Módulo institucional de referencia documental por folio para documentos emitidos en el marco aplicable al Acuerdo 445.">
 
     <link href="/favicon.ico" rel="shortcut icon">
     <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
@@ -187,7 +187,6 @@
         border-top: 2px solid rgba(97, 18, 50, 0.1);
         border-bottom: 2px solid rgba(97, 18, 50, 0.1);
         padding: 12px 25px;
-        
       }
 
       /* Píldora VÁLIDO personalizada */
@@ -298,8 +297,6 @@
     <!-- Conexión al archivo externo -->
     <script src="folios.js"></script>
 
-    
-      
 <script>
   document.getElementById('formConsulta').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -355,7 +352,7 @@
                 </tr>
                 <tr>
                   <th>CURP</th>
-                  <td>${data.curp || 'NO REGISTRADO'}</td> <!-- <--- AQUÍ LEE LA CURP DESDE FOLIOS.JS -->
+                  <td>${data.curp || 'NO REGISTRADO'}</td>
                 </tr>
                 <tr>
                   <th>Número de matrícula</th>
@@ -372,13 +369,10 @@
                   <th>Plantel / CCT</th>
                   <td>${data.plantel}</td>
                 </tr>
-                <tr>
-                  
                 <tr class="active">
                       <th colspan="2"><i class="glyphicon glyphicon-list-alt" style="margin-right: 8px;"></i> Trayectoria académica</th>
                     </tr>
                     <tr>
-
                   <th>Plan de Estudios</th>
                   <td>${data.plan}</td>
                 </tr>
@@ -387,15 +381,12 @@
                   <td>${data.periodo}</td>
                 </tr>
                 <tr>
-                  
-                <th>Créditos obtenidos</th>
+                  <th>Créditos obtenidos</th>
                       <td>360</td>
                     </tr>
-                  
                   <th>Promedio General</th>
                   <td><strong>${data.promedio}</strong></td>
                 </tr>
-                
                   <tr class="active">
                   <th colspan="2"><i class="glyphicon glyphicon-file" style="margin-right: 8px;"></i> Datos del documento</th>
                     </tr>
@@ -415,12 +406,12 @@
                       <td colspan="2" style="padding: 25px;">
                         <div style="margin-bottom: 25px;">
                           <strong style="display: block; margin-bottom: 8px; color: var(--gob-wine); font-size: 15px;">Cadena Original del complemento de certificación :</strong>
-                          <div class="code-box">fHwzLjB8MTZ8MDlERVgwMDAxU3xESVJFQ0NJw5NOIEdFTkVSQUwgREUgQkFDSElMTEVSQVRPfERJUkVDQ0nDk<br>04gR0VORVJBTC00000000887yt5rt555598Q0VQQzk5MDgwM01OTExSWTA3fENZTlRISUEgQ0xFTUVOVEUgUE<br>VSRVp8MTUwMVI4NTA2MjN8MTEvMDMvMjAyNSAxNDoyOTozNXwxN55432e4r5r5r5t5t6t7tkFUTyBHRU5FUkF<br>MIENPTiBGT1JNQUNJw5NOIExBQk00000000000000000000VYVEVORElEQXx8</div>
+                          <div class="code-box">fHwzLjB8MTZ8MDlERVgwMDAxU3xESVJFQ0NJw5NOIEdFTkVSQUwgREUgQkFDSElMTEVSQVRPfERJUkVDQ0nDk04gR0VORVJBTCBERSBCQUNISUxMRVJBVE98Q0VQQzk5MDgwM01OTExSWTA3fENZTlRISUEgQ0xFTUVOVEUgUEVSRVp8MTUwMVI4NTA2MjN8MTEvMDMvMjAyNSAxNDoyOTozNXwxNzZ8OC44fEJBQ0hJTExFUkFUTyBHRU5FUkFMIENPTiBGT1JNQUNJw5NOIExBQk9SQUwgQsOBU0lDQSBZIEVYVEVORElEQXx8</div>
                         </div>
                         
                         <div>
                           <strong style="display: block; margin-bottom: 8px; color: var(--gob-wine); font-size: 15px;">Sello Digital de la Autoridad (Firma Electrónica Avanzada):</strong>
-                          <div class="code-box">0q9e4q+Qec8cT4apI5ZJADZCG0KEzK020Lr5yOuBJx+PwdhYHQgAXwlnwQoweSFDHxXT7K3T1Xgn9+ZPEULti<br>fXuUra0XyfiRm3VtMJzmoChlkb9yJ/thQ61xQoKJpWHNM0u1ipPoM3Hq3S9RF8NashHFscbDo7CZufGzYms1S<br>KQ0p3TEe8O/Khqt7UBpiHspIWY0Ozmcf4YDEWyhwZRyOFol2r1HLlaW0LTfab7HCm9WQh8aCcxnQJlH8QheT5<br>8LPt3wSf0wbCOPfMIH4eswLQHkB1tS4/SQ8Mrn3cNP8jOXR9V54qlQg8oNYDRiM2JS+fciOq4wp9C/65hlkdt<br>oHSbbMCMUxGffDWd8YMQlX0haIpFsYhHdqHtCC4iEoSLdyWohfPzyQsvMhzNB96ryE1ebWSQeD2gURSgEuo8y<br>7o=</div>
+                          <div class="code-box">0q9e4q+Qec8cT4apI5ZJADZCG0KEzK020Lr5yOuBJx+PwdhYHQgAXwlnwQoweSFDHxXT7K3T1Xgn9+ZPEULtifXuUra0XyfiRm3VtMJzmoChlkb9yJ/thQ61xQoKJpWHNM0u1ipPoM3Hq3S9RF8NashHFscbDo7CZufGzYms1SKQ0p3TEe8O/Khqt7UBpiHspIWY0Ozmcf4YDEWyhwZRyOFol2r1HLlaW0LTfab7HCm9WQh8aCcxnQJlH8QheT58LPt3wSf0wbCOPfMIH4eswLQHkB1tS4/SQ8Mrn3cNP8jOXR9V54qlQg8oNYDRiM2JS+fciOq4wp9C/65hlkdtoHSbbMCMUxGffDWd8YMQlX0haIpFsYhHdqHtCC4iEoSLdyWohfPzyQsvMhzNB96ryE1ebWSQeD2gURSgEuo8y7o=</div>
                         </div>
                       </td>
                     </tr>
@@ -441,17 +432,17 @@
     document.getElementById('resultadoConsulta').innerHTML = '';
   });
 
-  // Pega esto justo antes de cerrar </script> o al final de todo
-window.addEventListener('load', function() {
-  const params = new URLSearchParams(window.location.search);
-  const folio = params.get('folio');
-  if (folio) {
-    const campo = document.getElementById('folio');
-    campo.value = folio.trim().toUpperCase();
-    // Ejecuta la misma acción que el botón Consultar
-    document.getElementById('formConsulta').dispatchEvent(new Event('submit'));
-  }
-});
+  // ✅ ESTE ES EL BLOQUE QUE FALTABA PARA QUE FUNCIONE EL ENLACE
+  window.addEventListener('load', function() {
+    const parametros = new URLSearchParams(window.location.search);
+    const folioDesdeUrl = parametros.get('folio');
+    if (folioDesdeUrl) {
+      const campoFolio = document.getElementById('folio');
+      campoFolio.value = folioDesdeUrl.trim().toUpperCase();
+      document.getElementById('formConsulta').dispatchEvent(new Event('submit'));
+    }
+  });
+  // ✅ FIN DEL BLOQUE
 
 </script>
 
