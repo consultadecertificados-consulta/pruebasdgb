@@ -1,19 +1,16 @@
 // folios.js - Base de datos actualizada
 const baseDatos = {
-    "CBG37603912550-": { 
-        nombre:"VANESSA BERNAL MARTINEZ", 
-        matricula: "1701M960101", 
-        curp: "BEMV920228MMCRRN03", // <--- NUEVO CAMPO
-        emisor: "DIRECCIÓN GENERAL DE BACHILLERATO ABIERTO DEL ESTADO DE MÉXICO", 
-        plantel: "TEMASCALCINGO CCT-15DEX0001C", 
-        plan: "BACHILLERATO INTENSIVO GENERAL", 
-        promedio: "8.5", 
-        periodo: "21-07-2022 al 15-08-2024", 
-        estatus: "REGISTRADO",
-        timbrado: "2024-08-25 16:20:11" 
-
-        },
-    "CBG376039125111": { 
+    "CBG376039125509": {  nombre:"VANESSA BERNAL MARTINEZ", matricula: "1701M960101", curp: "BEMV920228MMCRRN03", emisor: "DIRECCIÓN GENERAL DE BACHILLERATO ABIERTO DEL ESTADO DE MÉXICO", plantel: "TEMASCALCINGO CCT-15DEX0001C",plan: "BACHILLERATO INTENSIVO GENERAL",  promedio: "8.5", periodo: "21-07-2022 al 15-08-2024", estatus: "REGISTRADO",timbrado: "2024-08-25 16:20:11"},   
+        
+         // <--- NUEVO CAMPO
+       
+         
+         
+         
+         
+        
+        
+"CBG376039125111": { 
         nombre: "ANA KARLA DOMINGUEZ DE JESUS", 
         matricula: "1702R950202", 
         curp: "DOJA990501MDFMSN08", // <--- NUEVO CAMPO
