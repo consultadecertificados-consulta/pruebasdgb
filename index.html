@@ -451,7 +451,10 @@
 
  </div>
     </main>
-
+  window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const f = urlParams.get('folio');
+        if (f) { document.getElementById('folioInput').value = f; buscar(); }
     <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
   </body>
 </html>
