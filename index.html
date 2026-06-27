@@ -439,13 +439,6 @@
     document.getElementById('folio').value = '';
     document.getElementById('resultadoConsulta').innerHTML = '';
   });
-    }
-
-    window.onload = function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const f = urlParams.get('folio');
-        if (f) { document.getElementById('folioInput').value = f; buscar(); }
-    };
 </script>
 
 
@@ -459,33 +452,7 @@
  </div>
     </main>
  
-    <script src="https://cdn.gob.mx"></script>
-
-    <!-- Conexión al archivo externo -->
-    <script src="folios.js"></script>
-
-    <script>
-      // LÓGICA ASÍNCRONA PARA DETECTAR EL PARÁMETRO DE CÓDIGO QR EN GITHUB PAGES
-      window.addEventListener('DOMContentLoaded', function() {
-        const parametrosURL = new URLSearchParams(window.location.search);
-        const folioDesdeQR = parametrosURL.get('folio');
-        
-        if (folioDesdeQR) {
-          document.getElementById('folio').value = folioDesdeQR;
-          
-          let intentos = 0;
-          const comprobarYConsultar = setInterval(function() {
-            intentos++;
-            if (typeof baseDatos !== 'undefined') {
-              clearInterval(comprobarYConsultar);
-              document.getElementById('formConsulta').dispatchEvent(new Event('submit'));
-            } else if (intentos > 20) {
-              clearInterval(comprobarYConsultar);
-              console.error("Error: El archivo 'folios.js' tardó demasiado en cargar.");
-            }
-          }, 100);
-        }
-      });
-    </script>
+    <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
   </body>
 </html>
+     
