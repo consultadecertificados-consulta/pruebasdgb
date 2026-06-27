@@ -35,6 +35,22 @@
         position: relative;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       }
+      <!-- Bloque lector QR → muestra resultado automáticamente -->
+<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+
+<div id="lectorQR" style="width:100%;max-width:400px;margin:1rem auto;border:2px solid #006699;border-radius:8px;"></div>
+<div style="max-width:400px;margin:0 auto;padding:1rem;background:#f8f9fa;border-radius:8px;">
+  <strong>Resultado:</strong> <span id="resQR">Esperando escaneo...</span>
+</div>
+
+<script>
+const lector = new Html5Qrcode("lectorQR");
+lector.start(
+  { facingMode: "environment" },
+  { fps: 10, qrbox: { width: 250, height: 250 } },
+  dato => document.getElementById("resQR").textContent = dato
+).catch(() => document.getElementById("resQR").textContent = "No se pudo activar la cámara");
+</script>
 
       .hero-interior::after {
         content: '';
