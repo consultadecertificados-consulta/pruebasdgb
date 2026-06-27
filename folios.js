@@ -6,6 +6,5 @@ const baseDatos = {
        
          
       
-    }
-    // Repite la misma estructura con el resto de tus folios...
+   
 };
