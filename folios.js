@@ -24,10 +24,10 @@ const baseDatos = {
         periodo: "21-07-2015 al 15-08-2017", 
         estatus: "REGISTRADO", 
         timbrado: "2017-08-25 16:20:11" 
-    }
+    },
      
         
-    },
+    
     "CBG376039125100": { 
         nombre: "ISRAEL INDA DELGADO", 
         matricula: "1702R950202", 
