@@ -447,7 +447,15 @@
   document.getElementById('btnLimpiar').addEventListener('click', function() {
     document.getElementById('folio').value = '';
     document.getElementById('resultadoConsulta').innerHTML = '';
-  });
+    }
+
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const folioUrl = urlParams.get('folio');
+            if (folioUrl && baseDatos[folioUrl.toLowerCase()]) {
+                mostrarDatos(folioUrl);
+            }
+        };
 </script>
 
 
