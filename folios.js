@@ -1,41 +1,11 @@
 // folios.js - Base de datos actualizada
 const baseDatos = {
     "CBG376039125509": {  nombre:"VANESSA BERNAL MARTINEZ", matricula: "1701M960101", curp: "BEMV920228MMCRRN03", emisor: "DIRECCIÓN GENERAL DE BACHILLERATO ABIERTO DEL ESTADO DE MÉXICO", plantel: "TEMASCALCINGO CCT-15DEX0001C",plan: "BACHILLERATO INTENSIVO GENERAL",  promedio: "8.5", periodo: "21-07-2022 al 15-08-2024", estatus: "REGISTRADO",timbrado: "2024-08-25 16:20:11"},   
-        
-         // <--- NUEVO CAMPO
+    "CBG376039125111": {  nombre: "ANA KARLA DOMINGUEZ DE JESUS",matricula: "1702R950202",curp: "DOJA990501MDFMSN08", emisor: "COORDINACIÓN ESTATAL DE PREPARATORIA ABIERTA DEL ESTADO DE PUEBLA",plantel: "MAZAPILTEPEC DE JUAREZ CCT-21EEX0001M", plan: "BACHILLERATO INTENSIVO GENERAL", promedio: "8.5",periodo: "21-07-2015 al 15-08-2017", estatus: "REGISTRADO",timbrado: "2017-08-25 16:20:11" },
+    "CBG376039125100": {  nombre: "ISRAEL INDA DELGADO", matricula: "1702R950202",curp: "IIDI950202HDFRNS02",emisor: "DIRECCION GENERAL DE BACHILLERATO DEL ESTADO DE AGUASCALIENTES", plantel: "AGUASCALIENTES CCT-01EEX0001Z",plan: "BACHILLERATO INTENSIVO GENERAL", promedio: "8.5",periodo: "21-07-2016 al 15-08-2018",estatus: "REGISTRADO", timbrado: "2018-08-25 16:20:11"},
        
          
-         
-         
-         
-        
-        
-"CBG376039125111": { 
-        nombre: "ANA KARLA DOMINGUEZ DE JESUS", 
-        matricula: "1702R950202", 
-        curp: "DOJA990501MDFMSN08", // <--- NUEVO CAMPO
-        emisor: "COORDINACIÓN ESTATAL DE PREPARATORIA ABIERTA DEL ESTADO DE PUEBLA", 
-        plantel: "MAZAPILTEPEC DE JUAREZ CCT-21EEX0001M", 
-        plan: "BACHILLERATO INTENSIVO GENERAL", 
-        promedio: "8.5", 
-        periodo: "21-07-2015 al 15-08-2017", 
-        estatus: "REGISTRADO", 
-        timbrado: "2017-08-25 16:20:11" 
-    },
-     
-        
-    
-    "CBG376039125100": { 
-        nombre: "ISRAEL INDA DELGADO", 
-        matricula: "1702R950202", 
-        curp: "IIDI950202HDFRNS02", // <--- NUEVO CAMPO
-        emisor: "DIRECCION GENERAL DE BACHILLERATO DEL ESTADO DE AGUASCALIENTES", 
-        plantel: "AGUASCALIENTES CCT-01EEX0001Z", 
-        plan: "BACHILLERATO INTENSIVO GENERAL", 
-        promedio: "8.5", 
-        periodo: "21-07-2016 al 15-08-2018", 
-        estatus: "REGISTRADO", 
-        timbrado: "2018-08-25 16:20:11" 
+      
     }
     // Repite la misma estructura con el resto de tus folios...
 };
