@@ -255,7 +255,16 @@
           <li><a href="#">Inicio</a></li>
           <li class="active">Referencia documental por folio</li>
         </ol>
-
+        <!-- Lector QR -->
+<div style="margin: 20px auto; max-width: 420px; text-align: center;">
+  <h4 style="color: #611232;">Escanear Código QR</h4>
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+  <div id="lectorQR" style="width: 100%; height: 280px; border: 2px solid #611232; border-radius: 8px; margin: 10px auto;"></div>
+  <div style="padding: 10px; background: #f8f9fa; border-radius: 6px; margin-top: 8px;">
+    <strong>Lectura:</strong> <span id="resQR">Esperando código...</span>
+  </div>
+</div>
+        
         <div class="search-card">
           <div class="row">
             <div class="col-md-7 border-right-modern">
