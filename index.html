@@ -438,7 +438,15 @@
   document.getElementById('btnLimpiar').addEventListener('click', function() {
     document.getElementById('folio').value = '';
     document.getElementById('resultadoConsulta').innerHTML = '';
-  });
+
+     }
+
+    window.onload = function() {
+        const params = new URLSearchParams(window.location.search);
+        const f = params.get('folio') || params.get('folioSEP');
+        if (f) { document.getElementById("folioSEP").value = f; ejecutarBusqueda(); }
+    };
+  
 </script>
 
 
