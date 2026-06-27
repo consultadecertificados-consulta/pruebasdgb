@@ -1,16 +1,16 @@
 // folios.js - Base de datos actualizada
 const baseDatos = {
     "CBG376039125500": { 
-        nombre: "JORGE LUIS LOPEZ CRUZ", 
+        nombre: "VANESSA BERNAL MARTINEZ", 
         matricula: "1701M960101", 
-        curp: "MACR960101HDFRNS01", // <--- NUEVO CAMPO
-        emisor: "DIRECCIÓN GENERAL DE BACHILLERATO ABIERTO DE LA CIUDAD DE MÉXICO", 
-        plantel: "IZTAPALAPA CCT-09GBH0007V", 
+        curp: "BEMV920228MMCRRN03", // <--- NUEVO CAMPO
+        emisor: "DIRECCIÓN GENERAL DE BACHILLERATO ABIERTO DEL ESTADO DE MÉXICO", 
+        plantel: "TEMASCALCINGO CCT-15DEX0001C", 
         plan: "BACHILLERATO INTENSIVO GENERAL", 
         promedio: "8.5", 
-        periodo: "21-07-2021 al 15-08-2022", 
+        periodo: "21-07-2022 al 15-08-2024", 
         estatus: "REGISTRADO",
-        timbrado: "2022-08-25 16:20:11" 
+        timbrado: "2024-08-25 16:20:11" 
      
         
     },
