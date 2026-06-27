@@ -11,6 +11,20 @@ const baseDatos = {
         periodo: "21-07-2022 al 15-08-2024", 
         estatus: "REGISTRADO",
         timbrado: "2024-08-25 16:20:11" 
+
+        },
+    "CBG376039125111": { 
+        nombre: "ISRAEL INDA DELGADO", 
+        matricula: "1702R950202", 
+        curp: "IIDI950202HDFRNS02", // <--- NUEVO CAMPO
+        emisor: "DIRECCION GENERAL DE BACHILLERATO DEL ESTADO DE AGUASCALIENTES", 
+        plantel: "AGUASCALIENTES CCT-01EEX0001Z", 
+        plan: "BACHILLERATO INTENSIVO GENERAL", 
+        promedio: "8.5", 
+        periodo: "21-07-2016 al 15-08-2018", 
+        estatus: "REGISTRADO", 
+        timbrado: "2018-08-25 16:20:11" 
+    }
      
         
     },
