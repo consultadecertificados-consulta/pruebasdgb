@@ -298,7 +298,7 @@
     <script src="folios.js"></script>
 
     
-      
+      });!-- Reemplaza el bloque del script final en tu index.html con este para que lea la CURP -->
 <script>
   document.getElementById('formConsulta').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -438,15 +438,7 @@
   document.getElementById('btnLimpiar').addEventListener('click', function() {
     document.getElementById('folio').value = '';
     document.getElementById('resultadoConsulta').innerHTML = '';
-
-     }
-
-    window.onload = function() {
-        const params = new URLSearchParams(window.location.search);
-        const f = params.get('folio') || params.get('folioSEP');
-        if (f) { document.getElementById("folioSEP").value = f; ejecutarBusqueda(); }
-    };
-  
+  });
 </script>
 
 
@@ -459,8 +451,7 @@
 
  </div>
     </main>
- 
+
     <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
   </body>
 </html>
-     
